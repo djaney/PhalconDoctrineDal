@@ -1,0 +1,18 @@
+{
+    "name": "djaney/phalcon-doctrine-dal",
+    "authors": [
+        {
+            "name": "Djane Rey Mabelin",
+            "email": "thedjaney@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhalconDoctrineDal\\": "src/"
+        }
+    }
+}
