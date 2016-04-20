@@ -1,5 +1,8 @@
-<?php namespace PhalconDoctrineDal\Controller;
-class RestController {
+<?php namespace PhalconDoctrineDal\Collection;
+
+use Phalcon\Mvc\Controller;
+
+class RestController extends Controller {
     public function collection($entity){
         echo 'collection: '.$entity;
     }
