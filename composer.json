@@ -6,7 +6,9 @@
             "email": "thedjaney@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "doctrine/orm": "^2.5"
+    },
     "require-dev": {
         "phpunit/phpunit": "*"
     },

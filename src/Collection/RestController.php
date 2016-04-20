@@ -3,6 +3,9 @@
 use Phalcon\Mvc\Controller;
 
 class RestController extends Controller {
+    
+    protected $em;
+
     public function collection($entity){
         echo 'collection: '.$entity;
     }
@@ -16,5 +19,9 @@ class RestController extends Controller {
 
     public function delete($entity, $id){
         echo 'delete: '.$entity.'/'.$id;
+    }
+
+    public function setEntitiyManager($em){
+        $this->em = $em;
     }
 }

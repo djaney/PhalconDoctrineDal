@@ -7,7 +7,15 @@ use PhalconDoctrineDal\Collection\RestCollection;
 $app = new Micro();
 $di = new FactoryDefault();
 $app->setDI($di);
-$app->mount(new RestCollection());
+$app->mount(new RestCollection([
+    'db'=>[
+        'driver'=>'pdo_sqlite',
+        'memory'=>true,
+    ],
+    'modelsDir'=>__DIR__ . '/Test/Entity',
+    'modelsNamespace'=>"\\Test\\Entitiy\\",
+
+]));
 
 $app->notFound(function () use ($app) {
     $app->response->setStatusCode(404, "Not Found")->sendHeaders();
